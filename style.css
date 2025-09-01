@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #005f99, #ff7f50);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* Sections */
+section {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  color: #005f99;
+}
+
+/* Personal Story Section */
+.my-journey {
+  background: #e6f2ff;
+  border-left: 6px solid #ff7f50;
+}
+
+.my-journey h2 {
+  color: #005f99;
+}
+
+.my-journey p {
+  margin-bottom: 12px;
+}
+
+/* Call to Action */
+.cta {
+  display: inline-block;
+  background: #005f99;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cta:hover {
+  background: #004477;
+}
+
+/* Tools */
+.tools button, .donate {
+  background: #ff7f50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.tools button:hover, .donate:hover {
+  background: #e66a36;
+}
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #005f99;
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+}
