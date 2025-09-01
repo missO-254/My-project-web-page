@@ -1,10 +1,10 @@
-#  Recalibrate: AI-Powered Self-Discovery & Healing Platform  
+#  Recalibrate: Self-Discovery & Healing Platform  
 
 ##  Problem  
-Across the world, millions of people carry unseen psychological wounds — from childhood trauma, broken family structures, toxic environments, or painful life experiences. These wounds shape self-beliefs, affect relationships, and often keep individuals from living consciously and reaching their full potential. Unlike physical injuries, these wounds are invisible but deeply impactful.  
+Across the world, millions of people carry unseen psychological wounds, from childhood trauma, broken family structures, toxic environments, or painful life experiences. These wounds shape self-beliefs, affect relationships, and often keep individuals from living consciously and reaching their full potential. Unlike physical injuries, these wounds are invisible but deeply impactful.  
 
 ##  Solution  
-**Recalibrate** is an AI-powered personal development and mental well-being platform designed to help individuals heal, grow, and rediscover their true purpose. Through self-reflection tools, guided affirmations, journaling, and an AI self-reflection coach, users will gain knowledge, awareness, and the courage to live fulfilling lives.  
+**Discover your full potential** is an AI-powered personal development and mental well-being platform designed to help individuals heal, grow, and rediscover their true purpose. Through self-reflection tools, guided affirmations, journaling, and an AI self-reflection coach, users will gain knowledge, awareness, and the courage to live fulfilling lives.  
 
 ##  Key Features  
 - **AI Self-Reflection Coach 🤖** – an interactive assistant that asks reflective questions and provides personalized encouragement.  
@@ -27,7 +27,7 @@ Across the world, millions of people carry unseen psychological wounds — from 
 - **Payment Integration (Flutterwave/Paystack)** for subscriptions and donations, ensuring accessibility across Africa.  
 
 ##  Impact  
-Recalibrate will empower individuals — especially youth — with the tools to heal, grow, and live consciously, leading to healthier relationships, purposeful living, and stronger communities.  
+Recalibrate will empower individuals especially the youth with the tools to heal, grow, and live consciously, leading to healthier relationships, purposeful living, and stronger communities.  
 
 ---
 
