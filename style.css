@@ -1,98 +1,239 @@
+/* Custom Properties / Variables */
+:root {
+  --color-primary-light: #64e9e9; /* A light teal */
+  --color-primary-dark: #008080;  /* A dark teal */
+  --color-secondary-light: #ff69b4; /* A light pink/magenta */
+  --color-secondary-dark: #8b005e;  /* A dark pink/magenta */
+  --color-text-dark: #222;
+  --color-text-light: #f4f4f4;
+  --color-background-soft: #fcf6f9; /* A soft, warm background */
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f9;
-  color: #333;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.6;
+  color: var(--color-text-dark);
+  background-color: var(--color-background-soft);
 }
 
-/* Header */
-header {
-  background: linear-gradient(90deg, #005f99, #ff7f50);
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
+main {
+  flex-grow: 1;
+  padding: 2rem 1rem;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-/* Sections */
 section {
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 800px;
+  margin-bottom: 2.5rem;
+}
+
+.card {
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid #eee;
 }
 
-section h2 {
-  color: #005f99;
+.card.soft {
+  background-color: var(--color-primary-light);
 }
 
-/* Personal Story Section */
-.my-journey {
-  background: #e6f2ff;
-  border-left: 6px solid #ff7f50;
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-secondary-dark);
 }
 
-.my-journey h2 {
-  color: #005f99;
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
 }
 
-.my-journey p {
-  margin-bottom: 12px;
+p.muted {
+  font-style: italic;
+  color: #666;
 }
 
-/* Call to Action */
-.cta {
+/* Buttons */
+.btn {
   display: inline-block;
-  background: #005f99;
-  color: white;
+  padding: 0.75rem 1.5rem;
   border: none;
-  padding: 12px 18px;
-  border-radius: 6px;
-  margin-top: 15px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
   cursor: pointer;
-  font-size: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.cta:hover {
-  background: #004477;
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Tools */
-.tools button, .donate {
-  background: #ff7f50;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  margin-top: 10px;
-  cursor: pointer;
+.btn.primary {
+  background-color: var(--color-secondary-dark);
+  color: var(--color-text-light);
 }
 
-.tools button:hover, .donate:hover {
-  background: #e66a36;
+.btn.ghost {
+  background: transparent;
+  color: var(--color-primary-dark);
+  border: 2px solid var(--color-primary-dark);
+}
+
+/* Header / Hero */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-secondary-light));
+  color: var(--color-text-dark);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-art {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+  font-size: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-15deg);
+}
+
+/* Form Styles */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 textarea {
   width: 100%;
-  min-height: 100px;
-  margin-top: 10px;
-  padding: 10px;
+  padding: 0.75rem;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  background: #005f99;
-  color: white;
-  padding: 15px;
-  margin-top: 20px;
+.mood-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
 }
+
+.mood {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.mood:hover {
+  background-color: var(--color-secondary-light);
+  border-color: var(--color-secondary-dark);
+}
+
+.btn-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.msg {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: var(--color-primary-dark);
+}
+
+/* Step Cards */
+.step-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  margin-top: 2rem;
+}
+
+.step-card:first-of-type {
+  margin-top: 0;
+}
+
+.step-card h3 {
+  color: var(--color-primary-dark);
+}
+
+/* Tools Grid */
+.tools-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.tool {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.tool h3 {
+  color: var(--color-secondary-dark);
+}
+
+.affirmation {
+  font-style: italic;
+  font-weight: 300;
+  margin: 1rem 0;
+}
+
