@@ -1,86 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Journey Back to Self - Wholeness Hub</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lumina: Healing, Growth, & Conscious Living</title>
+  <meta name="description" content="Lumina — AI-powered personal development & healing. A safe space for journaling, gratitude, and self-reflection.">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="page-container">
 
-  <!-- Header -->
-  <header>
-    <h1>🌍 Discover Your Full Potential</h1>
-    <p>A journey back to self — helping individuals heal, grow, and live consciously.</p>
-  </header>
+    <header class="hero" role="banner">
+      <div class="hero-inner">
+        <h1>🌍 Discover Your Full Potential</h1>
+        <p class="lead">A gentle journey back to self — healing, growth, and conscious living.</p>
+        <nav aria-label="Main actions">
+          <button id="startJourney" class="btn primary">🌱 Start Your Journey</button>
+        </nav>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-card">✨ Lumina</div>
+      </div>
+    </header>
 
-  <!-- Why Wholeness Hub -->
-  <section class="story">
-    <h2>Why Wholeness Hub?</h2>
-    <p>
-      Many of us carry <strong>unseen psychological wounds</strong> from our childhood.  
-      Trauma can come from our guardians, the environment we grew up in, or painful life events.  
-      These experiences shape our beliefs, sometimes holding us back from reaching our full potential.
-    </p>
-    <p>
-      This project is born from my own journey, learning how trauma and environment affect who we become, and discovering ways to heal and step into purpose.
-    </p>
-  </section>
+    <main>
+      <section class="card" id="why">
+        <h2>Why Lumina?</h2>
+        <p>Many of us carry <strong>unseen psychological wounds</strong> - from childhood trauma, broken family structures, toxic environments, or painful life events. These wounds shape our beliefs, affect relationships, and often keep us from living consciously and reaching our full potential. Unlike physical injuries, these wounds are invisible but deeply impactful.</p>
+        <p>Lumina was born from my own personal journey and a deep commitment to create a safe space for healing and growth, helping others to unlock their full potential and rediscover their true path and joy.</p>
+      </section>
 
-  <!-- Personal Story -->
-  <section class="my-journey">
-    <h2>💙 My Journey</h2>
-    <p>
-      As a young girl, I always dreamed of a happy, successful, and fulfilling life. 
-      My childhood was joyful, but when I lost my dad at the age of 4, his absence quietly shaped my path in ways I didn’t realize until adulthood.
-    </p>
-    <p>
-      I later discovered that I was unconsciously searching for my father’s love, validation, and approval in the men I dated. 
-      This left me drained, lost, and feeling like I wasn’t enough. Psychological wounds are invisible unlike physical ones, but they deeply affect how we think, relate, and live.
-    </p>
-    <p>
-      Through inner work and reflection, I began to heal. With each passing day, I’m becoming better and more whole. 
-      I share this part of my story to remind you that no matter what you’ve been through, you can rise, heal, and step into the life you deserve.
-    </p>
-    <button class="cta" onclick="scrollToTools()">🌱 Start Your Journey</button>
-  </section>
+      <section class="card" id="story">
+        <h2>💙 My Story</h2>
+        <p>As a young girl, I always dreamt of a happy, fulfilling life. I had a childhood filled with joy and good memories, but little did I know that losing my dad at a very tender age would profoundly shape my relationships and sense of worth. It wasn't until adulthood that I began to understand how this loss had affected me. Through a journey of deep inner work and self-reflection, I began to heal, and that journey inspired me to create Lumina. I share this to remind you: whatever you've been through, healing and purpose are always possible.</p>
+      </section>
 
-  <!-- Reflection Tools -->
-  <section id="tools" class="tools">
-    <h2>🌱 Healing Tools</h2>
-    <button onclick="showAffirmation()">Daily Affirmation</button>
-    <p id="affirmationBox"></p>
+      <section class="card soft" id="guided-journey" aria-labelledby="journeyTitle">
+        <h2 id="journeyTitle">🌸 Your Guided Journey</h2>
+        <p class="muted">Begin your path to healing by following these simple steps. This is your safe space — there is no rush.</p>
 
-    <h3>Write Your Thoughts</h3>
-    <textarea id="journal" placeholder="Start journaling your thoughts here..."></textarea>
-    <button onclick="saveJournal()">Save Entry</button>
-    <p id="journalMsg"></p>
-  </section>
+        <div class="step-card" id="step-1">
+          <h3>Step 1: Pause & Reflect</h3>
+          <p>Begin by acknowledging your feelings and practicing gratitude. This gentle first step builds a foundation of self-awareness.</p>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="feelingInput">💭 How are you feeling right now?</label>
+              <textarea id="feelingInput" rows="3" placeholder="Describe your feeling or choose a quick mood below…"></textarea>
+              <div class="mood-buttons" role="group" aria-label="Quick mood choices">
+                <button class="mood" data-mood="Calm">🌿 Calm</button>
+                <button class="mood" data-mood="Anxious">🌧️ Anxious</button>
+                <button class="mood" data-mood="Hopeful">🌤️ Hopeful</button>
+                <button class="mood" data-mood="Sad">💧 Sad</button>
+                <button class="mood" data-mood="Grateful">💖 Grateful</button>
+              </div>
+              <button id="saveFeelingBtn" class="btn primary">Save Feeling</button>
+              <div id="feelingMsg" class="msg" aria-live="polite"></div>
+            </div>
+            <div class="form-group">
+              <label for="gratitudeInput">🙏 What are you grateful for today?</label>
+              <textarea id="gratitudeInput" rows="3" placeholder="One thing you're thankful for…"></textarea>
+              <button id="saveGratitudeBtn" class="btn primary">Save Gratitude</button>
+              <div id="gratitudeMsg" class="msg" aria-live="polite"></div>
+            </div>
+          </div>
+          <blockquote class="quote" aria-hidden="false">
+            “Gratitude turns what we have into enough. It makes sense of our past, brings peace for today, and creates a vision for tomorrow.” — Anonymous
+          </blockquote>
+        </div>
 
-  <!-- AI Assistant (Placeholder) -->
-  <section class="ai">
-    <h2>🤖 Self-Reflection Coach</h2>
-    <p>(Coming soon: An AI-powered coach that asks reflective questions and guides your growth.)</p>
-  </section>
+        <div class="step-card" id="step-2">
+          <h3>Step 2: Journal & Affirm</h3>
+          <p>Journaling helps you process emotions and gain clarity. Daily affirmations build a positive mindset and self-belief.</p>
+          <div class="tools-grid">
+            <div class="tool">
+              <h3>Daily Affirmation</h3>
+              <p id="affirmationBox" class="affirmation" aria-live="polite">Press the button for a gentle reminder.</p>
+              <button id="affirmBtn" class="btn primary">Show Affirmation</button>
+            </div>
+            <div class="tool">
+              <h3>Journaling</h3>
+              <label for="journalInput" class="sr-only">Journal entry</label>
+              <textarea id="journalInput" rows="6" placeholder="Write freely — your words are safe here..."></textarea>
+              <div class="btn-row">
+                <button id="saveJournalBtn" class="btn primary">Save Entry</button>
+                <button id="viewJournalBtn" class="btn ghost">View Entries</button>
+              </div>
+              <div id="journalMsg" class="msg" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <!-- Support Section -->
-  <section class="support">
-    <h2>Support This Mission 💙🧡</h2>
-    <p>Your support helps us reach more young people with healing tools.</p>
-    <a href="https://paystack.shop/pay/khpoeazsvh" 
-       target="_blank" 
-       class="donate">Donate via Paystack</a>
-  </section>
+      <section class="card" id="ai">
+        <h2>Self-Reflection Coach (coming soon)</h2>
+        <p>An AI-powered companion that will ask reflective questions, suggest journaling prompts, and personalise your growth path.</p>
+      </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Wholeness Hub | Built with love and light</p>
-  </footer>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <p>© 2025 Lumina — Built with love and light 💙🧡</p>
+      <a class="btn ghost" href="#support" role="link">Support</a>
+      <a class="btn ghost" href="https://paystack.shop/pay/khpoeazsvh" target="_blank" rel="noopener">Donate via Paystack</a>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
-  
-
-
